@@ -10,7 +10,7 @@ The analysis focuses on understanding sales performance through order volume, to
 
 The main objective is to evaluate sales performance over time by analyzing order volume, total order value, and average order value (AOV).
 
-The project follows a practical business intelligence workflow, from data exploration and SQL analysis to data visualization using Power BI.
+The project follows a practical Business Intelligence workflow, from data exploration and SQL analysis to data visualization using Power BI.
 
 ## Business Questions
 
@@ -36,44 +36,37 @@ AdventureWorks2019 sample database.
 
 **Main table:** `Sales.SalesOrderHeader`
 
-The analysis uses the following fields:
+Fields used:
 
 - `SalesOrderID`: Unique sales order identifier.
 - `OrderDate`: Date when the order was placed.
 - `TotalDue`: Total amount due for each order, including subtotal, tax, and freight.
 
-## Project Structure
+## SQL Analysis
 
-```text
-adventureworks-sales-analysis/
-│
-├── README.md
-│
-├── sql/
-│   ├── 01_data_exploration.sql
-│   ├── 02_sales_overview.sql
-│   └── 03_monthly_sales_analysis.sql
-│
-├── dashboard/
-│   └── sales_performance_dashboard.pbix
-│
-└── images/
-    └── dashboard_preview.png
-```
+The SQL analysis is organized into three stages:
+
+1. **Data Exploration:** Identification of the available historical period and initial data exploration.
+2. **Sales Overview:** Calculation of total orders, total order value, and average order value.
+3. **Monthly Sales Analysis:** Evaluation of monthly order volume, total order value, and average order value.
+
+SQL scripts:
+
+- [01 — Data Exploration](01_data_exploration.sql)
+- [02 — Sales Overview](02_sales_overview.sql)
+- [03 — Monthly Sales Analysis](03_monthly_sales_analysis.sql)
 
 ## Key Metrics
 
 | Metric | Result |
 |---|---:|
-| Total Order Value | $123,216,786.12 |
+| Total Order Value | 123,216,786.12 |
 | Total Orders | 31,465 |
-| Average Order Value | $3,916.00 |
+| Average Order Value | 3,916.00 |
 
-*Values are displayed in USD-equivalent numerical terms from the source data. The Power BI report uses Brazilian Real (BRL) formatting for presentation.*
+## Power BI Dashboard
 
-## Dashboard
-
-The Power BI dashboard provides an overview of sales performance through:
+The dashboard provides an overview of sales performance through:
 
 - Total Order Value
 - Total Orders
@@ -83,26 +76,30 @@ The Power BI dashboard provides an overview of sales performance through:
 - Monthly Average Order Value
 - Year filter
 
-![Sales Performance Dashboard](images/dashboard_preview.png)
+### Dashboard Preview
+
+![AdventureWorks Sales Performance Dashboard](dashboard_preview.png)
+
+**[Access the Power BI Dashboard (.pbix)](sales_performance_dashboard.pbix)**
 
 ## Key Findings
 
 - The dataset contains 31,465 sales orders.
 - Total order value is approximately 123.2 million.
 - Average order value is approximately 3,916.
-- The month with the highest order volume was May 2014, with 2,411 orders.
-- The month with the highest total order value was March 2014, with approximately 8.1 million.
+- May 2014 had the highest order volume, with 2,411 orders.
+- March 2014 had the highest total order value, approximately 8.1 million.
 
 ## Limitations
 
-- The analysis uses the `TotalDue` field, which includes subtotal, tax, and freight. Therefore, it should not be interpreted as net revenue or profit.
+- The `TotalDue` field includes subtotal, tax, and freight. Therefore, it should not be interpreted as net revenue or profit.
 - The dataset covers the period from May 2011 to June 2014.
-- May 2011 and June 2014 are partial periods within the dataset. Therefore, comparisons involving these months should be interpreted with caution.
+- May 2011 and June 2014 are partial periods within the dataset. Comparisons involving these months should be interpreted with caution.
 - The analysis focuses on sales performance at the order level and does not include product profitability or customer segmentation.
 
 ## Project Status
 
-Completed — initial SQL analysis and Power BI dashboard.
+Completed — SQL analysis and Power BI dashboard.
 
 ## Author
 
