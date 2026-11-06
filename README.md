@@ -78,7 +78,7 @@ The dashboard provides an overview of sales performance through:
 
 ### Dashboard Preview
 
-![AdventureWorks Sales Performance Dashboard](dashboard_preview.png)
+![AdventureWorks Sales Performance Dashboard](Sales_Performance_Dashboard.png)
 
 **[Access the Power BI Dashboard (.pbix)](sales_performance_dashboard.pbix)**
 
